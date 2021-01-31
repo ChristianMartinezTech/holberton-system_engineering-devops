@@ -1,0 +1,1 @@
+This is the fodler for the Shell Redirections.
