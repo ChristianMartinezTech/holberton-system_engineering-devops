@@ -1,2 +1,2 @@
 #!/bin/bash/
-find . -name "10-no_more_js" -delete
+find . -name "*.js" -delete
