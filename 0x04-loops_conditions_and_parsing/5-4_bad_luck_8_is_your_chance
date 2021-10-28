@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Best School 10 times
+
+n=1
+
+while [ $n -le 10 ]
+do
+    if [ $n -eq 4 ]
+    then
+        echo "bad luck"
+        n=$(( n+1 ))
+
+    elif [ $n -eq 8 ]
+    then
+        echo "good luck"
+        n=$(( n+1 ))
+    
+    else
+        echo "Best School"
+        n=$(( n+1 ))
+    fi
+done
