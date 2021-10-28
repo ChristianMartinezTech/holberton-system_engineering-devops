@@ -5,12 +5,13 @@ n=0
 
 while [ $n -le 9 ]
 do
-    if [ ! $n -eq 8 ]
+    if [ ! $n -eq 9 ]
     then
         echo "Best School"
         n=$(( n+1 ))
     else
         echo "Hi"
+        echo "Best School"
         n=$(( n+1 ))
     fi
 done
