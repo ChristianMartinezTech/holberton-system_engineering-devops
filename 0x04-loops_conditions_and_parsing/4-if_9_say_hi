@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Best School 10 times, but for the 9th iteration, displays Best School and then Hi
+
+n=0
+
+while [ $n -le 9 ]
+do
+    if [ ! $n -eq 8 ]
+    then
+        echo "Best School"
+        n=$(( n+1 ))
+    else
+        echo "Hi"
+        n=$(( n+1 ))
+    fi
+done
