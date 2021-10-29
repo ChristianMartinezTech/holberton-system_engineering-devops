@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 # FizzBuzz script that displays numbers from 1 to 100
 
-for ((n=0; n <= 100; n++))
+for ((n=1; n <= 100; n++))
 do
     if ((n % 15 == 0)) 
     then
-         echo "FizzBuzz"
+        echo "FizzBuzz"
     elif ((n % 5 == 0)) 
     then
-         echo "Buzz"
+        echo "Buzz"
     elif ((n % 3 == 0)) 
     then
-         echo "Buzz"
+        echo "Buzz"
     else
         echo "$n"
     fi
