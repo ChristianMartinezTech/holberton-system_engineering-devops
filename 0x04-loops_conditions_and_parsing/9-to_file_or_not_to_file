@@ -3,18 +3,20 @@
 
 if [ -e  school ]
 then
-    if [ -s school ]
-    then
-        echo "school file is empty"
 
-    elif ! [ -s school ]
+    echo "school file exists"
+
+    if [ -s school ]
     then
         echo "school file is not empty"
 
-    elif [ -f school ] 
-    then
-        echo "school is a regular file"
+    else
+        echo "school file is empty"
+    fi
 
+    if [ -f school ] 
+        then
+            echo "school is a regular file"
     fi
 
 else
