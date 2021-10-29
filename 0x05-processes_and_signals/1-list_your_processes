@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Bash script that displays its own PID
+# Displays a list of currently running processes
 
-ps -ef | more
+ps -ef
