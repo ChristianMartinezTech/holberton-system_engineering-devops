@@ -11,7 +11,7 @@ do
         echo "Buzz"
     elif ((n % 3 == 0)) 
     then
-        echo "Buzz"
+        echo "Fizz"
     else
         echo "$n"
     fi
