@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Exit or Trap, close signal?
+
+pkill 4-to_infinity_and_beyond
