@@ -2,4 +2,4 @@
 # Bash script that kills 4-to_infinity_and_beyond process
 
 
-kill 19 > /4-to_infinity_and_beyond
+kill 19 > 4-to_infinity_and_beyond
