@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Bash script that kills 4-to_infinity_and_beyond process
 
-x=pidof /4-to_infinity_and_beyond
-kill -15 19640
+x="$(pgrep -f 4-to_infinity_and_beyond)"
+kill "$x"
