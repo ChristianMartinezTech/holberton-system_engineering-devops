@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # Bash script that kills 4-to_infinity_and_beyond process
 
-x=pidof 4-to_infinity_and_beyond
-kill -19 x
+kill -19 25308
