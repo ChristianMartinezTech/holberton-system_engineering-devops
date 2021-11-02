@@ -1,0 +1,33 @@
+Test String File
+
+0. Simply matching School
+
+Holberton
+holberton
+H0lberton
+aaaahHolberton
+Holbertonaaaa
+
+.
+
+1. Repetition Token #0
+
+hbn
+hbtn
+hbttn
+hbtttn
+hbttttn
+hbtttttn
+hbttttttn
+
+.
+
+2. Repetition Token #1
+
+htn
+hbtn
+hbbtn
+hbbbtn
+
+.
+
