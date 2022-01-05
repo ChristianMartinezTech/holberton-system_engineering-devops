@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#ssh -i ~/.ssh/school 35.231.66.168
+
+apt-get update
+apt-get install nginx
+systemctl start nginx
+systemctl enable nginx
+ufw allow 'nginx full'
+ufw reload
