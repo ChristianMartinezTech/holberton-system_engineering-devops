@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Shell script to start the SSH conection
+#ssh -i ~/.ssh/id_rsa ubuntu@35.231.66.168 ubuntu@54.147.143.45
+
+# Load balancer server name and IP
+## lb-01 54.226.190.231
+
+# Install nginx
+sudo apt-get -y update && sudo apt-get -y upgrade
+sudo apt-get -y install nginx
+
+# Install HAproxy load balancer
+sudo apt-get -y install haproxy
+
+# Configure HAproxy using roundrobin, so that it send traffic to web-01 and web-02
+sudo chmod 777 /etc/haproxy/haproxy.cfg
+echo "frontend http_front
+    bind *:80
+    stats uri /haproxy?stats
+    default_backend http_back
+
+backend http_back
+    balance roundrobin
+    server 2388-web-01 35.231.66.168:80 check
+    server 2388-web-02 54.147.143.45:80 check" >> /etc/haproxy/haproxy.cfg
+
+# Restart
+sudo service haproxy restart
