@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Script to make an Nginx server listen to port 80.
+
+# Removed the bad configued file
+sudo rm /etc/nginx/sites-enabled/default
+
+# REplace it with a copy in sites-available
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+# Restart nginx
+sudo service nginx restart
