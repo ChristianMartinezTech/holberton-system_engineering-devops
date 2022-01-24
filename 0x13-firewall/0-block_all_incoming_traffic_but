@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# install the ufw firewall and setup a few rules
+# 2388-web-01 ssh -i ~/.ssh/id_rsa ubuntu@35.231.66.168
+# 2388-web-02 ssh -i ~/.ssh/id_rsa ubuntu@54.147.143.45
+# lb-01 ssh -i ~/.ssh/id_rsa ubuntu@54.226.190.231
+
+# Update and upgrade
+sudo apt-get -y update && sudo apt-get -y upgrade
+
+#Install ufw
+sudo apt-get install -y ufw
+
+# Check ufw is installed
+sudo ufw status
+
+# Allow ports
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
+
+# Check the ports are correctly added
+sudo ufw show added
+
+# Enable afw
+echo "y" | sudo ufw enable
+
+# Check ufw is correctly enabled
+sudo ufw status
