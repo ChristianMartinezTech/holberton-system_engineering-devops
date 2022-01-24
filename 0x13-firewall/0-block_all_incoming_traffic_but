@@ -7,7 +7,7 @@
 # Update and upgrade
 sudo apt-get -y update && sudo apt-get -y upgrade
 
-#Install ufw
+# UFW shopuld be installed by default in linux
 sudo apt-get install -y ufw
 
 # Check ufw is installed
