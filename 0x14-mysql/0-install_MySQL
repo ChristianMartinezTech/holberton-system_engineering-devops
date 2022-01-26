@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Install MySQL distribution 5.7.x
+# 2388-web-01 ssh -i ~/.ssh/id_rsa ubuntu@35.243.249.147
+# 2388-web-02 ssh -i ~/.ssh/id_rsa ubuntu@54.147.143.45
+# lb-01 ssh -i ~/.ssh/id_rsa ubuntu@54.226.190.231
+
+sudo apt-get -y update && sudo apt-get -y upgrade
+sudo apt install wget -y
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
+    ubuntu bionic
+    Ok
+sudo apt-get update
+
+sudo apt-get install -y libtinfo5
+sudo apt-get install -y libmecab2
+
+wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-common_5.7.37-1ubuntu18.04_amd64.deb
+sudo dpkg -i mysql-common_5.7.37-1ubuntu18.04_amd64.deb
+
+wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-community-client_5.7.37-1ubuntu18.04_amd64.deb
+sudo dpkg -i mysql-community-client_5.7.37-1ubuntu18.04_amd64.deb
+
+wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-client_5.7.37-1ubuntu18.04_amd64.deb
+sudo dpkg -i mysql-client_5.7.37-1ubuntu18.04_amd64.deb
+
+wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-community-server_5.7.37-1ubuntu18.04_amd64.deb
+sudo dpkg -i mysql-community-server_5.7.37-1ubuntu18.04_amd64.deb
+
+wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-server_5.7.37-1ubuntu18.04_amd64.deb
+sudo dpkg -i mysql-server_5.7.37-1ubuntu18.04_amd64.deb
+
+sudo mysql -u root -p
+
+sudo apt-get -y update && sudo apt-get -y upgrade
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
+sudo apt --fix-broken install
