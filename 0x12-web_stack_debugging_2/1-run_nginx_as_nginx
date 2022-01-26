@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Set nginx to run as nginx user, and listen to active IPs on port 8000
+# 2388-web-01 ssh -i ~/.ssh/id_rsa ubuntu@35.243.249.147
+# 2388-web-02 ssh -i ~/.ssh/id_rsa ubuntu@54.147.143.45
+# lb-01 ssh -i ~/.ssh/id_rsa ubuntu@54.226.190.231
+
+sudo chown nginx:nginx /etc/nginx/nginx.conf
+sudo chmod 777 /etc/nginx/nginx.conf
+sed -i 's/80 default_server/8080 default_server/' /etc/nginx/sites-available/default
+pkill apache2
+sudo -u nginx service nginx restart
