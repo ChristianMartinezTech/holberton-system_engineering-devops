@@ -19,7 +19,7 @@ if __name__ == '__main__':
     TASKS = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}"
                          .format(argv[1]))
     TASK_JSON = TASKS.json()
-    
+
     USER_INFO = {USER_ID: [{
                 "task": i.get('title'),
                 "completed": i.get('completed'),
