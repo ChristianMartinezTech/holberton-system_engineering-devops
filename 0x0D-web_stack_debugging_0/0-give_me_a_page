@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Script to get Apache to run on the container and to return a page containing Hello Holberton
 
-service apache2 restart
+service apache2 start

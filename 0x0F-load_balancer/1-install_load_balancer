@@ -7,7 +7,6 @@
 
 # Install nginx
 sudo apt-get -y update && sudo apt-get -y upgrade
-sudo apt-get -y install nginx
 
 # Install HAproxy load balancer
 sudo apt-get -y install haproxy

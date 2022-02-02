@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# reate a MySQL user named holberton_user on both web-01 and web-02 
+# with the host name set to localhost and the password projectcorrection280hbtn
+# 2388-web-01 ssh -i ~/.ssh/id_rsa ubuntu@35.243.249.147
+# 2388-web-02 ssh -i ~/.ssh/id_rsa ubuntu@54.147.143.45
+# lb-01 ssh -i ~/.ssh/id_rsa ubuntu@54.226.190.231
+
+sudo mysql -u root -p
+CREATE USER 'holberton_user'@'localhost' IDENTIFIED BY 'projectcorrection280hbtn';
+GRANT REPLICATION CLIENT ON *.* TO 'holberton_user'@'localhost';
+FLUSH PRIVILEGES;
+exit
+
+DROP USER 'holberton_user'@'localhost';

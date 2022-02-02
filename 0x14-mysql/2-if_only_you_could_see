@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Create a database named tyrell_corp
+# with the host name set to localhost and the password projectcorrection280hbtn
+# 2388-web-01 ssh -i ~/.ssh/id_rsa ubuntu@35.243.249.147
+# 2388-web-02 ssh -i ~/.ssh/id_rsa ubuntu@54.147.143.45
+# lb-01 ssh -i ~/.ssh/id_rsa ubuntu@54.226.190.231
+
+sudo mysql -u root -p
+CREATE DATABASE IF NOT EXISTS tyrell_corp;
+USE tyrell_corp;
+CREATE TABLE IF NOT EXISTS nexus6(id INT UNIQUE AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL);
+
+INSERT INTO nexus6(name)
+VALUES ('Lion');
+
+GRANT SELECT ON nexus6 TO 'holberton_user'@'localhost';
+
