@@ -2,6 +2,6 @@
 
 exec { 'Update loaded files extensions':
     command => "sudo sed -i 's/.phpp/.php/g' wp-settings.php ",
-    path    => "/usr/bin",
-    cwd     => "/var/www/html"
+    path    => '/usr/bin',
+    cwd     => 'var/www/html'
 }
